@@ -289,4 +289,59 @@ footer{
         display: block;
         color: #fff; /* Ensure text is visible */
     }
+
+    /* Footer Responsivness*/
+
+    /* Footer Responsiveness */
+    .footer_bar {
+        display: flex;
+        flex-direction: column; /* Force stack vertically */
+        align-items: center;    /* Center everything horizontally */
+        text-align: center;
+        margin: 0 1rem;
+        padding-top: 2rem;
+    }
+
+    /* Target each block (Company info, Collection, Brand/Links) */
+    .company_info, 
+    .collection, 
+    .website_link {
+        width: 100% !important; /* Force full width to prevent side-by-side */
+        max-width: 300px;       /* Keeps text from getting too wide on tablets */
+        margin-bottom: 3rem;    /* Creates the vertical "gap" between sections */
+    }
+
+    .company_info p{
+        text-align: center;
+    }
+
+    #underline {
+        margin: 1rem auto;      /* Centers the yellow line under the logo */
+        width: 60px;            /* Makes it a nice decorative accent */
+    }
+
+    .collection ul, 
+    .website_link ul {
+        padding: 0;             /* Remove default browser padding */
+        margin: 0;
+    }
+
+    .collection ul li, 
+    .website_link ul li {
+        text-align: center;     /* Centers the link text */
+        margin: 0.8rem 0;       /* Adds space between links for easy tapping */
+    }
+
+    .premium_words {
+        flex-wrap: wrap;        /* Allows words to wrap to next line if they don't fit */
+        justify-content: center;
+        gap: 15px;
+        padding: 1rem;
+        font-size: 0.9rem;      /* Slightly smaller for mobile */
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+        padding-bottom: 1rem;
+    }
 }
