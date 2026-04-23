@@ -74,7 +74,7 @@ class ZNCF_Plugin{
                 $full_name = sanitize_text_field($_POST['fullname']);
                 $email = sanitize_email($_POST['email']);
                 $num = absint($_POST['mobilenumber']);
-                $subject = sanitize_text_field($_POST['subject']);
+                $queryType = sanitize_text_field($_POST['query_type']);
                 $inquiry = sanitize_textarea_field($_POST['inquiry']);
 
                 //Manage File Uploading
@@ -105,7 +105,7 @@ class ZNCF_Plugin{
                     'name' => $full_name,
                     'email' => $email,
                     'phone_number' => $num,
-                    'subject' => $subject,
+                    'query-type' => $queryType,
                     'message' => $inquiry,
                     'attached_file' => $attached_url,
                     'created_at' => current_time('mysql')
@@ -114,15 +114,17 @@ class ZNCF_Plugin{
                    //Prepare and send email
 
                    $to = 'hamzanaeem12@gmail.com';
-                   $header = array('Content-Type: text/html; charset=UTF-8', 'From: ZN Leathers <znleathers@gmail.com>');
+                   $header = array('Content-Type: text/html; charset=UTF-8');
+                   $header[] = 'From: ZN Leathers <znleathers@gmail.com>';
+                   $header[] = "Reply-To: " . $email;
 
                    $body = '<h2>Query from ZN Leathers</h2>';
                    $body .= '<p><strong> Name: </strong>' . esc_html($full_name) . '</p>';
                    $body .= '<p><strong> Email Address: </strong>' . esc_html($email) . '</p>';
                    $body .= '<p><strong> Phone Number: </strong>' . esc_html($num) . '</p>';
-                   $body .= '<p><strong> Query Subject: </strong>' . esc_html($subject) . '</p>';
+                   $body .= '<p><strong> Query Type: </strong>' . esc_html($queryType) . '</p>';
                    $body .= '<p><strong> Message: </strong>'. esc_html($inquiry) . '</p>';
-                   wp_mail($to, "New Order Query: $subject", $body, $header, $attachements);
+                   wp_mail($to, "Query Type: $queryType", $body, $header, $attachements);
                    wp_send_json_success(array("message" => "Your query is sent successfully."));
                    
                    
