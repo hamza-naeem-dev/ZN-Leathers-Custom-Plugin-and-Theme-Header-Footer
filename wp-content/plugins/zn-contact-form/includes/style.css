@@ -1,0 +1,35 @@
+label{
+    color: #EAB308;
+    font-size: 12px;
+}
+
+#name, #mail, #cell, #query, #desc{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #A68246;
+    color: #fff;
+    font-size: 16px;
+}
+
+#uploading{
+    margin-top: 20px;
+}
+
+#submit_btn{
+    background: transparent;
+    border: 2px solid #EAB308;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+}
+
+.qty_field{
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
