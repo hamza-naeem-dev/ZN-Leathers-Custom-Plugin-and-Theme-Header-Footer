@@ -18,7 +18,7 @@
             </div>
             
             <div class="collection">
-                <h3 class="heading">The Collection</h3>
+                <h3 class="heading">Collection</h3>
                 <ul>
                     <li><a href="#sovreign">The Sovereign</a></li>
                     <li><a href="#diplomat">The Diplomat</a></li>
@@ -28,13 +28,18 @@
             </div>
 
             <div class="website_link">
-                <h3 class="heading">The Brand</h3>
+                <h3 class="heading">Brand</h3>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#collection">The Collection</a></li>
                     <li><a href="#craft">The Craft</a></li>
                     <li><a href="#inquiry">Bespoke Inquiries</a></li>
                 </ul>
+            </div>
+
+            <div class="contactbtn">
+                <h3 class="heading">Get In Touch</h3>
+                <button class="getintouch"><a href="#inquiry">Contact ZN Leathers</a></button>
             </div>
         </div>
         <div class="premium_words">

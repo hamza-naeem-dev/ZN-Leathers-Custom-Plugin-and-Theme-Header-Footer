@@ -102,15 +102,30 @@ header
 
 footer{
     background-color: #1a1612;
-    width: 100%;
+    max-width: 100%;
     height: max-content;
     margin-top: 10%;
 }
-.footer_bar{
+.footer_bar {
     display: flex;
     justify-content: space-between;
-    margin: 0 3rem;
+    align-items: center; 
+    margin: 0;          
+    padding: 0 3rem;
+    width: 100%;
+}
+
+.collection,
+.website_link {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.collection ul,
+.website_link ul {
+    padding: 0;
+    margin: 0;
 }
 
 #underline{
@@ -124,15 +139,10 @@ footer{
     font-family: "Playfair Display", serif;
 }
 
-.company_info h2,
 .company_info p{
     color: #fff;
-}
-
-.company_info p{
     text-align: justify;
 }
-
 .company_info h2{
     color: #c9a96e;
     font-family: "Playfair Display", serif;
@@ -141,12 +151,34 @@ footer{
 .heading{
     color: #c9a96e;
     font-family: "Playfair Display", serif;
+    width: 100%;
+    text-align: center;
 }
+
+.getintouch{
+    font-family: "Playfair Display", serif;
+    background: transparent;
+    padding: 1rem;
+    border: 2px solid #EAB308;
+    transition: all 0.5s ease;
+}
+
+.getintouch a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.getintouch a:hover{
+    color: #FDE68A;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
 
 .collection ul li{
     list-style-type: none;
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
 }
 
 .collection ul li a{
@@ -163,9 +195,8 @@ footer{
 .website_link ul li{
     list-style-type: none;
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
 }
-
 .website_link ul li a{
     text-transform: uppercase;
     color: #fff;
@@ -199,6 +230,7 @@ footer{
     font-family: "Playfair Display", serif;
     font-style: normal;
 }
+
 
 /* Media Queries */
 
@@ -290,8 +322,6 @@ footer{
         color: #fff; /* Ensure text is visible */
     }
 
-    /* Footer Responsivness*/
-
     /* Footer Responsiveness */
     .footer_bar {
         display: flex;
@@ -305,7 +335,8 @@ footer{
     /* Target each block (Company info, Collection, Brand/Links) */
     .company_info, 
     .collection, 
-    .website_link {
+    .website_link,
+    .contactbtn {
         width: 100% !important; /* Force full width to prevent side-by-side */
         max-width: 300px;       /* Keeps text from getting too wide on tablets */
         margin-bottom: 3rem;    /* Creates the vertical "gap" between sections */
